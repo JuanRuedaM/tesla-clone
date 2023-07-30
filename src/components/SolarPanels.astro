@@ -1,0 +1,20 @@
+---
+import Section from "./Section.astro";
+---
+<Section 
+  title="Solar Panels" 
+  subtitle="Schedule a Virtual Consultation"
+  color="black"
+  isUnderline = "underline"> 
+
+  <div slot="footer" class="flex justify-center [&>a]:mx-[12px]">
+    <a class="border-[3px] border-white rounded font-sm px-20 py-2 bg-white text-black" href="#">
+      Order Now
+    </a>
+    <a class="border-[3px] border-[#2a2c32] rounded font-sm px-20 py-2 bg-[#2a2c32] text-white" href="#">
+      Learn More
+    </a>
+  </div>
+
+  <img slot="background" src="solar-panels.avif" alt="Model 3" srcset="" class=" w-full object-cover object-center -translate-y-32">
+</Section>

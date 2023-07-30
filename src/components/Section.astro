@@ -1,0 +1,32 @@
+---
+const {color, title, subtitle = '', subtitle2 = '', isUnderline = ''} = Astro.props
+const textColor = `text-${color}`
+let pointer
+isUnderline == 'underline' ? pointer = `cursor-pointer` : pointer = 'cursor-default'
+---
+
+<section data-header-color={color} class="bg-slate-500 h-screen w-screen text-center relative overflow-hidden landing-section">
+
+  <div class="relative z-30 h-full flex flex-col">
+    <header>
+      <h2 class={`pt-32 text-[40px] font-medium ${textColor}`}>
+        {title}
+      </h2>
+      <p class={`text-sm pt-1 ${textColor} ${isUnderline} ${pointer} underline-offset-2 hover:underline-offset-4`}>
+        {subtitle}
+      </p>
+      <p class={`text-sm pt-0 ${textColor}`}>
+        {subtitle2}
+      </p>
+    </header>
+
+    <footer class="pb-20 flex flex-col flex-grow flex-nowrap justify-end">
+      <slot name="footer" />
+    </footer>
+  </div>
+  
+  <div class="absolute top-0 bottom-0 h-full w-full z-10">
+    <slot name="background"></slot>
+  </div>
+
+</section>

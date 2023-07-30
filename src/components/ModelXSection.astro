@@ -1,0 +1,20 @@
+---
+import Section from "./Section.astro";
+---
+<Section 
+  title="Model X" 
+  subtitle="Explore Inventory"
+  color="black"
+  isUnderline = "underline"> 
+
+  <div slot="footer" class="flex justify-center [&>a]:mx-[12px]">
+    <a class="border-[3px]  rounded font-sm px-20 py-2 border-[#dcdad9] bg-[#dcdad9] text-black" href="#">
+      Custom Order
+    </a>
+    <a class="border-[3px] border-[#2a2c32] rounded font-sm px-20 py-2 bg-[#2a2c32] text-white" href="#">
+      Demo Drive
+    </a>
+  </div>
+
+  <img slot="background" src="model-x.avif" alt="Model 3" srcset="" class=" w-full object-cover object-center -translate-y-32">
+</Section>
